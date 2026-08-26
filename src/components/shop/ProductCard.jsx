@@ -32,11 +32,11 @@ const ProductCard = ({ product }) => {
                 </p>
 
                 <div className={styles.quantity}>
-                <button onClick={handleDecrement}>−</button>
+                <button aria-label={`Decrease quantity of ${product.title}`} onClick={handleDecrement}>−</button>
 
                 <span>{quantity}</span>
 
-                <button onClick={handleIncrement}>+</button>
+                <button aria-label={`Increase quantity of ${product.title}`} onClick={handleIncrement}>+</button>
                 </div>
 
                 <button
