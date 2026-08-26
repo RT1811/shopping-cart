@@ -1,2 +1,19 @@
-const Cart = () => <h1>Cart</h1>;
+import { useOutletContext } from "react-router";
+
+const Cart = () => {
+    const {
+    cart,
+    removeFromCart,
+    updateQuantity,
+  } = useOutletContext();
+
+  return (
+    <main>
+      <h1>Cart</h1>
+
+      <pre>{JSON.stringify(cart, null, 2)}</pre>
+    </main>
+  );
+};
+
 export default Cart;

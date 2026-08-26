@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
     return (
         <nav>
             <ul>
@@ -11,7 +11,7 @@ const Navbar = () => {
                     <Link to="/shop">Shop</Link>
                 </li>
                 <li>
-                    <Link to="/cart">Cart</Link>
+                    <Link to="/cart">Cart {cartCount}</Link>
                 </li>
                 
             </ul>
