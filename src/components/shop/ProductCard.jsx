@@ -5,10 +5,10 @@ const ProductCard = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
     const { addItem } = useOutletContext();
 
-    const handleIncreament = () => setQuantity((prev) => prev + 1);
+    const handleIncrement = () => setQuantity((prev) => prev + 1);
     const handleDecrement = () => setQuantity((prev) => Math.max(1, prev - 1));
 
-    const handleAddToCard = () => {
+    const handleAddToCart = () => {
         addItem(product, quantity);
         setQuantity(1);
     };
@@ -21,9 +21,9 @@ const ProductCard = ({ product }) => {
             <div>
                 <button onClick={handleDecrement}>-</button>
                 <span>{quantity}</span>
-                <button onClick={handleIncreament}>+</button>
+                <button onClick={handleIncrement}>+</button>
             </div>
-            <button onClick={handleAddToCard}>Add to Cart</button>
+            <button onClick={handleAddToCart}>Add to Cart</button>
         </div>
     );
 };

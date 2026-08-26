@@ -1,9 +1,7 @@
-import { useOutletContext } from "react-router";
 import useProducts from "../../hooks/useProducts";
 import ProductCard from "./ProductCard";
 
 const Shop = () => {
-  const { addItem } = useOutletContext();
   const { products, loading, error } = useProducts();
 
   if (loading) return <p>Loading products...</p>;
