@@ -1,0 +1,31 @@
+.shop {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.heading {
+  margin-bottom: 2rem;
+}
+
+.heading h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.heading p {
+  margin-top: 0.4rem;
+  color: #6b7280;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.status {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.1rem;
+}

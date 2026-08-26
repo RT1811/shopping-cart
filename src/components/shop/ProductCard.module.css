@@ -1,0 +1,109 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.imageContainer {
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem;
+  background: white;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 1.25rem;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.price {
+  margin: 1rem 0;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.quantity button {
+  width: 2rem;
+  height: 2rem;
+
+  border: 1px solid #d1d5db;
+  border-radius: 0.4rem;
+
+  background: white;
+}
+
+.quantity button:hover {
+  background: #f3f4f6;
+}
+
+.quantity span {
+  min-width: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.addButton {
+  margin-top: auto;
+
+  width: 100%;
+  padding: 0.75rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  background: #111827;
+  color: white;
+
+  font-weight: 600;
+}
+
+.addButton:hover {
+  background: #374151;
+}

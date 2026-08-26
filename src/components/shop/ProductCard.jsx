@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router";
+import styles from "./ProductCard.module.css"
 
 const ProductCard = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
@@ -14,17 +15,38 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <div>
-            <img src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>${product.price}</p>
-            <div>
-                <button onClick={handleDecrement}>-</button>
-                <span>{quantity}</span>
-                <button onClick={handleIncrement}>+</button>
+        <article className={styles.card}>
+            <div className={styles.imageContainer}>
+                <img
+                className={styles.image}
+                src={product.image}
+                alt={product.title}
+                />
             </div>
-            <button onClick={handleAddToCart}>Add to Cart</button>
-        </div>
+
+            <div className={styles.content}>
+                <h2 className={styles.title}>{product.title}</h2>
+
+                <p className={styles.price}>
+                ${product.price.toFixed(2)}
+                </p>
+
+                <div className={styles.quantity}>
+                <button onClick={handleDecrement}>−</button>
+
+                <span>{quantity}</span>
+
+                <button onClick={handleIncrement}>+</button>
+                </div>
+
+                <button
+                className={styles.addButton}
+                onClick={handleAddToCart}
+                >
+                Add to Cart
+                </button>
+            </div>
+        </article>
     );
 };
 
