@@ -1,24 +1,19 @@
 import { useOutletContext } from "react-router";
+import useProducts from "../../hooks/useProducts";
 
 const Shop = () => {
   const { addItem } = useOutletContext();
+  const { products, loading, error } = useProducts();
 
-  const testProduct = {
-    id: 1,
-    title: "Test Product",
-    price: 10,
-    image: "",
-    quantity: 3,
-  };
+  if (loading) return <p>Loading products...</p>;
+  if (error) return <p>Error:{error}</p>
 
   return (
-    <main>
-      <h1>Shop</h1>
-
-      <button onClick={() => addItem(testProduct, 3)}>
-        Add Test Product
-      </button>
-    </main>
+    <div>
+        {products.map((product) => (
+            <div key={product.id}>{product.title}</div>
+        ))}
+    </div>
   );
 };
 

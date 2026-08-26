@@ -15,7 +15,7 @@ const App = () => {
             : item
         );
       }
-      return [...prevCart, { ...product, quantity }];
+      return [...prevCart, { id: product.id, title: product.title, price: product.price, image: product.image, quantity, },];
     })
   }
 
@@ -24,9 +24,9 @@ const App = () => {
   }
 
   const updateQuantity = (id, quantity) => {
-    setCart((prevCart) => {
+    setCart((prevCart) => 
       prevCart.map((item) => (item.id === id ? { ...item, quantity } : item))
-    })
+    )
   }
 
   const cartCount = cart.reduce(

@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router";
 const Cart = () => {
     const {
     cart,
-    removeFromCart,
+    removeItem,
     updateQuantity,
   } = useOutletContext();
 
