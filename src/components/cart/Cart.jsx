@@ -12,9 +12,11 @@ const Cart = () => {
 
   return (
     <main>
+        <h1>Cart</h1>
+        
         {cart.map((item) => (
             <div key={item.id}>
-                <img src={item.image} alt="item.title" />
+                <img src={item.image} alt={item.title} />
                 <h3>{item.title}</h3>
                 <p>{item.price}</p>
                 <div>
@@ -23,7 +25,7 @@ const Cart = () => {
                     </button>
                 
                     <span>{item.quantity}</span>
-                    <button onClick={() => updateQuantity(item.quantity + 1)}>
+                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>
                         +
                     </button>
                 </div>
